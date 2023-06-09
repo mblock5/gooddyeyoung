@@ -1,8 +1,8 @@
-/* ---------------------- FONTS ---------------------- */
+/* --------------------------- FONTS --------------------------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* -------------------- CSS RESET  -------------------- */
+/* ------------------------- CSS RESET  ------------------------- */
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -51,4 +51,107 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+/* --------------------------- GLOBAL ---------------------------- */
+
+*, header, footer {
+    font-family: Montserrat, Verdana, sans-serif;
+}
+
+/* body {
+    margin: 0 auto;
+} */
+
+a {
+    text-decoration: none;
+}
+
+
+/* --------------------------- HEADER  --------------------------- */
+
+header {
+    position: fixed;
+    background-color: #000000;
+    height: 96px;
+    width: 100%;
+}
+
+h1 {
+    visibility: hidden;
+    height: 0;
+}
+
+/* ------------- NAVIGATION -------------- */
+
+nav {
+    margin: 0 auto;
+    width: 1280px;
+}
+
+nav ul {
+    display: inline-flex;
+}
+
+/* -- NAV LINKS -- */
+
+#homeLink {
+    margin-top: 20px;
+    margin-right: 32px;
+}
+
+.navLinks {
+    margin: 38px 0px 0px 40px;
+}
+
+nav li a {
+    color: #FFFFFF;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ---------------------------- MAIN ----------------------------- */
+
+main {
+    margin: 0 auto;
+    width: 1280px;
+}
+
+#navSpace {
+    height: 96px;
+}
+
+/* --------------- SECTION: HOME1 ----------------- */
+
+#homeSection1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#homeSection1 p {
+    margin-top: 160px;
+    grid-column-start: 1;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+#homeSection1 img {
+    margin-top: 78px;
+    grid-column-start: 2;
+}
+
+/* --------------- SECTION: HOME2 ----------------- */
+
+/* ---------------- SECTION: DYES ----------------- */
+
+/* --------------- SECTION: ABOUT ----------------- */
+
+/* --------------- SECTION: CONTACT --------------- */
+
+/* --------------------------- FOOTER  --------------------------- */
+
+footer {
+    margin: 0 auto;
+    width: 1280px;
 }
