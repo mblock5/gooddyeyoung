@@ -59,9 +59,9 @@ table {
     font-family: Montserrat, Verdana, sans-serif;
 }
 
-/* body {
+body {
     margin: 0 auto;
-} */
+}
 
 a {
     text-decoration: none;
@@ -86,6 +86,7 @@ h1 {
 
 nav {
     margin: 0 auto;
+    padding-left: 98px;
     width: 1280px;
 }
 
@@ -97,11 +98,11 @@ nav ul {
 
 #homeLink {
     margin-top: 20px;
-    margin-right: 32px;
+    margin-right: 152px;
 }
 
 .navLinks {
-    margin: 38px 0px 0px 40px;
+    margin: 38px 0px 0px 32px;
 }
 
 nav li a {
@@ -113,13 +114,19 @@ nav li a {
 
 /* ---------------------------- MAIN ----------------------------- */
 
-main {
-    margin: 0 auto;
-    width: 1280px;
-}
+/* main {
+    
+    
+} */
 
 #navSpace {
     height: 96px;
+}
+
+.lineGradient {
+    height: 6px;
+    width: auto;
+    background-image: linear-gradient(to right, #DA286A, #F4DF2D, #3EA0CB, #6269B0);
 }
 
 /* --------------- SECTION: HOME1 ----------------- */
@@ -127,21 +134,59 @@ main {
 #homeSection1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: 1280px;
+    margin: 0 auto;
 }
 
 #homeSection1 p {
     margin-top: 160px;
+    padding-left: 54px;
     grid-column-start: 1;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 600;
+}
+
+#homeSection1 p span {
+    font-weight: 800;
 }
 
 #homeSection1 img {
     margin-top: 78px;
     grid-column-start: 2;
+    margin-left: auto;
 }
 
 /* --------------- SECTION: HOME2 ----------------- */
+
+#homeSection2 {
+    background-color: #0FB8BB;
+}
+
+#homeSection2 ul {
+    display: inline-flex;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+#homeSection2 li {
+    margin: 0 auto;
+    padding: 36px 0px;
+}
+
+#homeSection2 img {
+    width: 110px;
+    padding: 0px 35px 5px 35px;
+}
+
+#homeSection2 p {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    width: 180px;
+}
+
+
 
 /* ---------------- SECTION: DYES ----------------- */
 
