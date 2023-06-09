@@ -163,14 +163,14 @@ nav li a {
 }
 
 #homeSection2 ul {
+    margin: 0 auto;
     display: inline-flex;
     width: 1280px;
-    margin: 0 auto;
 }
 
 #homeSection2 li {
     margin: 0 auto;
-    padding: 36px 0px;
+    padding: 31px 0px;
 }
 
 #homeSection2 img {
@@ -189,6 +189,42 @@ nav li a {
 
 
 /* ---------------- SECTION: DYES ----------------- */
+
+#dyes {
+    margin: 0 auto;
+}
+
+#dyes h2 {
+    position: relative;
+
+}
+
+#dyeContent {
+    width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#dyeDetails {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+#dyeImages {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#dyeImages img.first-of-type {
+    grid-row-start: 1;
+}
+
+#dyeImages img.last-of-type {
+    grid-row-start: 2;
+}
+
+
 
 /* --------------- SECTION: ABOUT ----------------- */
 
