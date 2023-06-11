@@ -151,7 +151,9 @@ nav li a {
 }
 
 #homeSection1 img {
-    margin-top: 78px;
+    height: 425px;
+    width: 561;
+    margin-top: 64px;
     grid-column-start: 2;
     margin-left: auto;
 }
@@ -163,8 +165,8 @@ nav li a {
 }
 
 #homeSection2 ul {
+    display: flex;
     margin: 0 auto;
-    display: inline-flex;
     width: 1280px;
 }
 
@@ -174,8 +176,8 @@ nav li a {
 }
 
 #homeSection2 img {
-    width: 110px;
-    padding: 0px 35px 5px 35px;
+    width: 92px;
+    padding: 10px 46px 5px 46px;
 }
 
 #homeSection2 p {
@@ -195,8 +197,9 @@ nav li a {
 }
 
 #dyes h2 {
-    position: relative;
-
+    position: fixed;
+    left: 60px;
+    top: 60px;
 }
 
 #dyeContent {
