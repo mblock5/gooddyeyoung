@@ -86,7 +86,7 @@ h1 {
 
 nav {
     margin: 0 auto;
-    padding-left: 98px;
+    
     width: 1280px;
 }
 
@@ -99,10 +99,11 @@ nav ul {
 #homeLink {
     margin-top: 20px;
     margin-right: 152px;
+    margin-left: 54px;
 }
 
 .navLinks {
-    margin: 38px 0px 0px 32px;
+    margin: 38px 0px 0px 54px;
 }
 
 nav li a {
@@ -151,10 +152,9 @@ nav li a {
 }
 
 #homeSection1 img {
-    height: 425px;
-    width: 561;
-    margin-top: 64px;
+    height: 460px;
     grid-column-start: 2;
+    margin-top: 64px;
     margin-left: auto;
 }
 
@@ -194,12 +194,19 @@ nav li a {
 
 #dyes {
     margin: 0 auto;
+    background: linear-gradient(to top, #FF3386, transparent);
+    height: 680px;
 }
 
 #dyes h2 {
-    position: fixed;
-    left: 60px;
-    top: 60px;
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    top: 84px;
+    left: 640px;
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 #dyeContent {
@@ -212,22 +219,22 @@ nav li a {
 #dyeDetails {
     grid-column-start: 2;
     grid-row-start: 1;
+    margin-top: 96px;
+}
+
+#dyeDetails h3 {
+    font-size: 24px;
+    font-weight: 600;
 }
 
 #dyeImages {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    margin-left: 54px;
+    margin-top: 56px;
 }
 
-#dyeImages img.first-of-type {
-    grid-row-start: 1;
+#dyeImages img {
+    border-radius: 12px;
 }
-
-#dyeImages img.last-of-type {
-    grid-row-start: 2;
-}
-
-
 
 /* --------------- SECTION: ABOUT ----------------- */
 
