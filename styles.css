@@ -61,6 +61,7 @@ table {
 
 body {
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 a {
@@ -86,8 +87,7 @@ h1 {
 
 nav {
     margin: 0 auto;
-    
-    width: 1280px;
+    max-width: 1280px;
 }
 
 nav ul {
@@ -135,7 +135,7 @@ nav li a {
 #homeSection1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
@@ -167,7 +167,7 @@ nav li a {
 #homeSection2 ul {
     display: flex;
     margin: 0 auto;
-    width: 1280px;
+    max-width: 1280px;
 }
 
 #homeSection2 li {
@@ -199,22 +199,25 @@ nav li a {
 }
 
 #dyes h2 {
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
     position: relative;
-    top: 84px;
+    z-index: -1;
+    top: 86px;
     left: 640px;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: 800;
     text-transform: uppercase;
 }
 
 #dyeContent {
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+/* -- DYE DETAILS -- */
 
 #dyeDetails {
     grid-column-start: 2;
@@ -223,9 +226,35 @@ nav li a {
 }
 
 #dyeDetails h3 {
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 36px;
+    margin-bottom: 12px;
+}
+
+#dyeColor {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#dyeTypeAndAmount {
+    margin: 6px 0px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#dyePrice {
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#dyeDescription {
+    margin-top: 32px;
     font-weight: 600;
 }
+
+/* -- DYE IMAGES -- */
 
 #dyeImages {
     margin-left: 54px;
@@ -236,6 +265,51 @@ nav li a {
     border-radius: 12px;
 }
 
+/* -- DYE SWATCHES -- */
+
+#swatches {
+    display: inline-flex;
+}
+
+.dyeSwatch {
+    margin-top: 232px;
+    margin-right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: black;
+    border: 4px solid #FFFFFF;
+}
+
+#exGirlSwatch {
+    background-color: #FF3386;
+}
+#blueRuinSwatch {
+    background-color: #031CFF;
+}
+#bizSwatch {
+    background-color: #FF7903;
+}
+#rockLobsterSwatch {
+    background-color: #FF0303;
+}
+#kowabungaSwatch {
+    background-color: #129100;
+}
+#riotSwatch {
+    background-color: #FF5E00;
+}
+#stealMySunshineSwatch {
+    background-color: #fffb00;
+}
+#narwhalSwatch {
+    background-color: #00D4F7;
+}
+#pplEaterSwatch {
+    background-color: #7B01DF;
+}
+
+
 /* --------------- SECTION: ABOUT ----------------- */
 
 /* --------------- SECTION: CONTACT --------------- */
@@ -244,5 +318,5 @@ nav li a {
 
 footer {
     margin: 0 auto;
-    width: 1280px;
+    max-width: 1280px;
 }
