@@ -88,7 +88,7 @@ h1 {
 
 nav {
     margin: 0 auto;
-    max-width: 1280px;
+    width: 1280px;
 }
 
 nav ul {
@@ -116,11 +116,6 @@ nav li a {
 
 /* ---------------------------- MAIN ----------------------------- */
 
-/* main {
-    
-    
-} */
-
 #navSpace {
     height: 96px;
 }
@@ -136,7 +131,7 @@ nav li a {
 #homeSection1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1280px;
+    width: 1280px;
     margin: 0 auto;
 }
 
@@ -168,7 +163,7 @@ nav li a {
 #homeSection2 ul {
     display: flex;
     margin: 0 auto;
-    max-width: 1280px;
+    width: 1280px;
 }
 
 #homeSection2 li {
@@ -200,7 +195,7 @@ nav li a {
 }
 
 #dyes h2 {
-    max-width: 1280px;
+    width: 1280px;
     margin: 0 auto;
     position: relative;
     z-index: -1;
@@ -212,7 +207,7 @@ nav li a {
 }
 
 #dyeContent {
-    max-width: 1280px;
+    width: 1280px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -320,13 +315,13 @@ nav li a {
 #about {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1280px;
+    width: 1280px;
     margin: 0 auto;
 }
 
 #about h2 {
     grid-column-start: 1;
-    margin-top: 64px;
+    margin-top: 128px;
     margin-bottom: 64px;
     margin-left: 54px;
     font-size: 36px;
@@ -335,9 +330,10 @@ nav li a {
 }
 
 #about p {
+    width: 586px;
     margin-left: 54px;
     grid-column-start: 1;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 140%;
 }
@@ -347,10 +343,11 @@ nav li a {
 }
 
 #about img {
-    height: 585px;
+    height: 600px;
     grid-column-start: 2;
     margin-left: auto;
-    margin-top: -164px;
+    margin-top: -228px;
+    padding-left: 42px;
 }
 
 /* --------------- SECTION: CONTACT --------------- */
@@ -358,35 +355,150 @@ nav li a {
 #contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1280px;
+    width: 1280px;
     margin: 0 auto;
 }
 
 #contact img {
     grid-column-start: 1;
-    height: 780px;
-    margin-top: -32px;
+    height: 820px;
+    margin-top: -216px;
 }
 
 #contact h2 {
     grid-column-start: 2;
+    font-size: 28px;
+    font-weight: 800;
+    padding-top: 128px;
+    padding-bottom: 12px;
+    text-transform: uppercase;
 }
 
 #contact p {
     grid-column-start: 2;
 }
 
+#contactDirections {
+    padding-bottom: 32px;
+}
+
 /* -- CONTACT FORM -- */
 
 #contact form {
+    height: 525px;
     grid-column-start: 2;
 }
 
+.formP, .formP_C {
+    margin: 12px 0px;
+}
+
+.formP label {
+    font-weight: 600;
+}
+
+.formP input {
+    width: 250px;
+    height: 25px;
+}
+
+.formP_C label {
+    font-weight: 600;
+}
+
+.formP_C input {
+    width: 250px;
+    height: 100px;
+}
+
+.formP input, .formP_C input {
+    padding: 2px 2px;
+}
+
+#contactMethod {
+    width: 255px;
+    height: 40px;
+    border: 1px solid #000000;
+    margin-bottom: 16px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+#contactMethod legend {
+    font-weight: 600;
+}
+
+#contactMethod label {
+    padding-left: 18px;
+}
+
+
 /* -- CONTEST FORM -- */
+
+#contest {
+    width: 300px;
+    position: relative;
+    top: -440px;
+    left: 300px;
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+#contest legend {
+    visibility: hidden;
+    width: 0px;
+}
+
+#contest p {
+    width: 250px;
+    margin: 0 auto;
+}
+
+#contest p:first-of-type {
+    font-weight: 800;
+    padding: 16px 0px;
+}
+
+#rules {
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+#contest p:nth-of-type(2) {
+    line-height: 120%;
+    margin-bottom: 32px;
+}
+
+#contest label {
+    font-weight: 600;
+}
+
+#contest input {
+    width: 100px;
+    height: 25px;
+    margin: 8px 0px;
+}
+
+#generate {
+    border-radius: 4px;
+    border: 1px solid #000000;
+}
+
+#contestResults {
+    height: 86px;
+}
+
+#submit {
+    position: relative;
+    top: -420px;
+    left: 325px;
+}
 
 /* --------------------------- FOOTER  --------------------------- */
 
 footer {
-    margin: 0 auto;
-    max-width: 1280px;
+    width: 1280px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 16px;
 }

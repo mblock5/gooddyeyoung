@@ -18,7 +18,7 @@
                 <li id="homeLink"><a href="#homeSection1"><img src="images/white_icons/logo.png" alt="good dye young logo" height="50"></a></li>
                 <li class="navLinks"><a href="#dyesSection">Semi-Permanent Dyes</a></li>
                 <li class="navLinks"><a href="#about">About</a></li>
-                <li class="navLinks"><a href="#contact">Contact</a></li>
+                <li class="navLinks"><a href="#contactSection">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -106,8 +106,8 @@
 
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>Please enter your contact information in the form:</p>
-            <img src="images/other/hayley_brian3.png" alt="hayley and brian, owners and founders of good dye young">
+            <p id="contactDirections">Please enter your contact information in the form below:</p>
+            <img id="contactSection" src="images/other/hayley_brian3.png" alt="hayley and brian, owners and founders of good dye young">
             <form>
                 <p class="formP">
                     <label for="firstName">First Name*</label><br>
@@ -129,7 +129,7 @@
                     <input type="email" id="email" name="email" required><br>
                 </p>
 
-                <fieldset>
+                <fieldset id="contactMethod">
                     <legend>Preferred Contact Method</legend>
 
                     <label for="prefPhone">Phone</label>
@@ -139,22 +139,24 @@
                     <input type="radio" id="prefEmail" name="prefContact" value="email">
                 </fieldset>
 
-                <p class="formP">
+                <p class="formP_C">
                     <label for="comments">Comments*</label><br>
-                    <input type="text" id="firstName" name="firstName" required><br>
+                    <input type="text" id="comments" name="comments" required><br>
                 </p>
 
-                <fieldset>
+                <fieldset id="contest">
                     <legend>Contest</legend>
                     <p>Enter for a chance to win a $25 GDY gift card!</p>
                     <p><span id="rules">Rules</span><br>
-                        Enter a number between 1 and 25. If your guess matches the randomly generated number, you win!</p>   
+                        Enter a number between 1 and 10. If your guess matches the randomly generated number, you win!</p>   
                     
                     <label for="userGuess">Your guess:</label>
                     <input type="number" id="userGuess" name="userGuess" min="1" max="25">
-
+                    <br>
                     <label for="generatedNum">Computer:</label>
                     <input type="number" id="generatedNum" name="generatedNum" readonly>
+
+                    <input type="button" value="Generate" id="generate">
 
                     <p id="contestResults"></p>
                 </fieldset>
@@ -165,7 +167,7 @@
             </form>
 
         </section>
-        
+        <div class="lineGradient"></div>
     </main>
 
     <footer>
