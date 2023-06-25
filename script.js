@@ -381,18 +381,108 @@ function validateForm(event) {
     // prevent default submission
     event.preventDefault();
 
-    // call f(x)to clear previous error messages
-    clearErrorMessages();
+    // remove existing error messages
+    let errorSpans = document.getElementsByClassName("errorMessage");
+    for( let i = 0; i < errorSpans.length; i++) {
+        errorSpans[i].textContent = "";
+    }
 
+    // grab user input from form
+  let firstName = document.getElementById("firstName").value;
+  let lastName = document.getElementById("lastName").value;
+  let phoneNum = document.getElementById("phoneNum").value;
+  let email = document.getElementById("email").value;
+  let contactMethod = document.querySelector("input[name='prefContact']:checked").value;
+  let comments = document.getElementById("comments").value;
 
+    // regexs
+    let nameRegex = /^[a-zA-Z]+$/;
+    let phoneRegex = /^\d{10}$/;
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // flag validity
+    let isValid = true;
+
+    // validate first name
+    if(firstName === "") {
+        displayErrorMessage("firstName", "First name is required.");
+        isValid = false;
+    } else if (!nameRegex.test(firstName)) {
+        displayErrorMessage("firstName", "First name should only contain letters.");
+        isValid = false;
+    }
+
+    // validate last name
+    if(lastName === "") {
+        displayErrorMessage("lastName", "Last name is required.");
+        isValid = false;
+    } else if (!nameRegex.test(lastName)) {
+        displayErrorMessage("lastName", "Last name should only contain letters.");
+        isValid = false;
+    }
+
+    // validate phone number
+    if(phoneNum === "") {
+        displayErrorMessage("phoneNum", "Phone number is required.");
+        isValid = false;
+    } else if (!phoneRegex.test(phoneNum)) {
+        displayErrorMessage("phoneNum", "Please enter a valid phone number with 10 digits.");
+        isValid = false;
+    }
+
+    // validate email
+    if(email === "") {
+        displayErrorMessage("email", "Email is required.");
+        isValid = false;
+    } else if (!emailRegex.test(email)) {
+        displayErrorMessage("email", "Please enter a valid email address.");
+        isValid = false;
+    }
+
+    // validate comments
+    if(comments === "") {
+        displayErrorMessage("comments", "Comments are required.");
+        isValid = false;
+    }
+
+    // when form is valid, display a message to user
+    if(isValid && event.target.checkValidity()) {
+        let user = {
+            firstName,
+            lastName,
+            phoneNum,
+            email,
+            contactMethod,
+            comments,
+        };
+
+        // display success message
+        document.getElementById("successMessage").classList.remove("hide");
+
+        // display values in console
+        console.log("First name: " + firstName);
+        console.log("Last name: " + lastName);
+        console.log("Phone number: " + phoneNum);
+        console.log("Email: " + email);
+        console.log("Preferred Contact Method: " + contactMethod);
+        console.log("Comments: " + comments);
+
+        //display values to user
+        document.getElementById("userInfo").innerHTML = `<strong>First name: </strong>${firstName}<br><strong>Last name: </strong>${lastName}<br><strong>Phone number: </strong>${phoneNum}<br><strong>Email: </strong>${email}<br><strong>Preferred Contact Method: </strong>${contactMethod}<br><strong>Comments: </strong>${comments}<br>`;
+
+        // reset the form and success message
+        document.getElementById("contactForm").reset();
+    }
 }
 
-// function to clear error messages
-function clearErrorMessages() {
-    let errorMessages = document.getElementsByClassName
+// display the error message(s)
+function displayErrorMessage(inputId, message) {
+    let errorSpan = document.getElementById(inputId + "Error");
+    errorSpan.textContent = message;
 }
 
-
+// event listeners for form submission
+document.getElementById("contactForm").addEventListener("submit", validateForm);
 
 
 
@@ -423,6 +513,7 @@ function gamePlay() {
     if(isNaN(userGuess) || userGuess < 1 || userGuess > 10) {
         results.textContent = "Please enter a valid number between 1 and 10.";
         generatedNum = "";
+        return;
     } else {
         // display generatedNum on screen in "Computer:" field
         generatedNum = randomNumber(1, 10);

@@ -410,8 +410,9 @@ nav li a:hover {
 
 #contact img {
     grid-column-start: 1;
-    height: 880px;
-    margin-top: -216px;
+    height: 940px;
+    width: 595px;
+    margin-top: -246px;
 }
 
 #contact h2 {
@@ -429,6 +430,7 @@ nav li a:hover {
 
 #contactDirections {
     padding-bottom: 32px;
+    line-height: 140%;;
 }
 
 /* -- CONTACT FORM -- */
@@ -455,7 +457,7 @@ nav li a:hover {
     font-weight: 600;
 }
 
-.formP_C input {
+textarea {
     width: 250px;
     height: 100px;
 }
@@ -528,6 +530,40 @@ nav li a:hover {
     margin: 8px 0px;
 }
 
+/* input errors */
+.errorMessage {
+    color: #FF0303;
+    font-size: 11px;
+}
+
+/* success message */
+#successMessage {
+    color: #129100;
+    font-size: 12px;
+    font-weight: 700px;
+    position: relative;
+    bottom: 410px;
+    left: 46px;
+}
+
+.hide {
+    display: none;
+}
+
+/* user info */
+#userInfo {
+    position: relative;
+    bottom: 420px;
+    left: 46px;
+    color: #129100;
+    font-size: 11px;
+}
+
+strong {
+    font-weight: 600;
+}
+
+
 #generate {
     cursor: pointer;
     border-radius: 4px;
@@ -540,11 +576,12 @@ nav li a:hover {
 }
 
 #submit {
+    cursor: pointer;
     position: relative;
     border-radius: 4px;
     height: 40px;
     top: -420px;
-    left: 325px;
+    left: 4px;
     text-transform: uppercase;
 }
 

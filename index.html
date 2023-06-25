@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" async></script>
+    <script src="script.js" defer></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="favicon.ico" type="image/x-icon">
     <title>Good Dye Young</title>
@@ -102,34 +102,38 @@
             The two became best friends through years of creative collaboration and developed GDY as a hair color brand with a vision to create a community around self-expression, color and happiness about being who you are.
             <br><br>
             GDY is an extension of Hayley & Brian’s shared passion to provide a brand that breaks down that wall of just being a company, and creating a community you can be a part of, empowered by tools that encourage your freedom of self-expression.</p>
-            <img src="images/other/hayley_brian.png" alt="hayley and brian, owners and founders of good dye young">                         <!-- ADD IMAGE -->
+            <img src="images/other/hayley_brian.png" alt="hayley and brian, owners and founders of good dye young">                         
         </section>
 
         <div class="lineGradient"></div>
 
         <section id="contact">
             <h2>Contact Us</h2>
-            <p id="contactDirections">Please enter your contact information in the form below:</p>
+            <p id="contactDirections">Please enter your contact<br> information in the form below:</p>
             <img src="images/other/hayley_brian3.png" alt="hayley and brian, owners and founders of good dye young">
-            <form>
+            <form id="contactForm" action="" method="POST" novalidate>
                 <p class="formP">
                     <label for="firstName">First Name*</label><br>
                     <input type="text" id="firstName" name="firstName" required><br>
+                    <span class="errorMessage" id="firstNameError"></span>
                 </p>
 
                 <p class="formP">
                     <label for="lastName">Last Name*</label><br>
                     <input type="text" id="lastName" name="lastName" required><br>
+                    <span class="errorMessage" id="lastNameError"></span>
                 </p>
 
                 <p class="formP">
                     <label for="phoneNum">Phone Number*</label><br>
                     <input type="tel" id="phoneNum" name="phoneNum" required><br>
+                    <span class="errorMessage" id="phoneNumError"></span>
                 </p>
 
                 <p class="formP">
                     <label for="email">Email*</label><br>
                     <input type="email" id="email" name="email" required><br>
+                    <span class="errorMessage" id="emailError"></span>
                 </p>
 
                 <fieldset id="contactMethod">
@@ -144,7 +148,8 @@
 
                 <p class="formP_C">
                     <label for="comments">Comments*</label><br>
-                    <input type="text" id="comments" name="comments" required><br>
+                    <textarea name="comments" id="comments" required></textarea><br>
+                    <span class="errorMessage" id="commentsError"></span>
                 </p>
 
                 <fieldset id="contest">
@@ -165,11 +170,15 @@
                 </fieldset>
 
                 <p class="formP">
-                    <input type="submit" name="submit" id="submit">
+                    <input type="submit" name="submit" id="submit"><br>
+                    <span id="successMessage" class="hide">Thank you for your submission!</span>
+                    <br>
+                    <br>
+                    <span id="userInfo"></span>
                 </p>
             </form>
-
         </section>
+
         <div class="lineGradient"></div>
     </main>
 
