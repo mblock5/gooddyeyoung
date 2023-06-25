@@ -87,11 +87,11 @@ h1 {
 /* ----------- LIGHT/DARK MODE ----------- */
 
 #lightDarkMode {
-    color: #FFFFFF;
-    font-size: 12px;
+    color: #b5b5b5;
+    font-size: 9px;
     position: fixed;
     top: 8px;
-    right: 8px;
+    right: 40px;
     text-transform: uppercase;
     font-weight: 500;
 }
@@ -221,7 +221,7 @@ nav li a:hover {
 #dyes {
     margin: 0 auto;
     background: linear-gradient(to top, #FF3386, transparent);
-    height: 680px;
+    height: 720px;
 }
 
 #dyes h2 {
@@ -289,35 +289,19 @@ nav li a:hover {
 #dyeImage1 {
     margin-left: 54px;
     margin-top: 56px;
-    z-index: 1;
-}
-
-#dyeImage1 img {
+    z-index: 0;
     border-radius: 12px;
 }
 
 #dyeImage2 {
     position: relative;
-    top: -559px;
+    top: -156px;
+    left: 400px;
     margin-left: 54px;
     margin-top: 56px;
-    z-index: 0;
-    
+    z-index: 1;
+    border-radius: 12px; 
 }
-
-#dyeImage2 img {
-    border-radius: 12px;
-}
-
-/*.dyeImageHide {
-    opacity: 0%;
-    transition: opacity 0.5s ease-in;
-}
-
-.dyeImageReturn {
-    opacity: 100%;
-    transition: opacity 0.5s ease-out;
-}*/
 
 /* -- DYE SWATCHES -- */
 
@@ -569,5 +553,5 @@ footer {
     width: 1280px;
     text-align: center;
     font-weight: 600;
-    margin-top: 100px;
+    margin-top: 40px;
 }
