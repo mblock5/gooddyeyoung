@@ -11,6 +11,23 @@ document.getElementById("lightMode").addEventListener("click", function() {
     // background of #homeSection2
     document.getElementById("homeSection2").style.backgroundColor = "#0FB8BB";
 
+    // borders of swatches
+    let dyeSwatches = document.getElementsByClassName("dyeSwatch")
+    for(let i = 0; i < dyeSwatches.length; i++) {
+        dyeSwatches[i].style.borderColor = "#FFFFFF";
+    }
+
+    // borders in #contact
+    document.getElementById("contactMethod").style.borderColor = "#000000";
+    document.getElementById("contest").style.borderColor = "#000000";
+    document.getElementById("contactMethod").style.borderStyle = "solid";
+    document.getElementById("contest").style.borderborderStyle = "solid";
+
+    // input in #contact
+    let input = document.querySelectorAll("input");
+    for ( let i = 0; i < input.length; i++) {
+        input[i].style.backgroundColor = "#FFFFFF";
+        }
 });
 
 // DARK MODE
@@ -32,21 +49,20 @@ document.getElementById("darkMode").addEventListener("click", function() {
     }
 
     // borders in #contact
-    
     document.getElementById("contactMethod").style.borderColor = "#FFFFFF";
     document.getElementById("contest").style.borderColor = "#FFFFFF";
+    document.getElementById("contactMethod").style.borderWeight = "1px";
+    document.getElementById("contest").style.borderWeight = "1px";
 
     // input in #contact
     let input = document.querySelectorAll("input");
     for ( let i = 0; i < input.length; i++) {
         input[i].style.backgroundColor = "#CDCDCD";
     }
-
-
 });
 
-// SEMI-PERMANENT DYES SECTION
 
+// SEMI-PERMANENT DYES SECTION
 
 // EX-GIRL
 
@@ -64,8 +80,9 @@ document.getElementById("exGirlSwatch").addEventListener("click", function () {
     // description
     document.getElementById("dyeDescription").textContent = "Bold and neon, our hot pink will make all your exes wish they had you back.";
 
-    // image
-    document.getElementById("dyeImage").innerHTML = `<img src="images/dyes/exGirlProduct.png" alt="ex-girl hair dye packaging" height="500">`;
+    // images
+    document.getElementById("dyeImage1").innerHTML = `<img src="images/dyes/exGirlProduct.png" alt="ex-girl hair dye packaging" height="500">`;
+    document.getElementById("dyeImage2").innerHTML = `<img src="images/dyes/exGirlModel.png" alt="model with pink hair" height="500">`;
 
     // reset border-width of other swatches
     document.getElementById("exGirlSwatch").style.borderWidth = "6px";
@@ -94,8 +111,18 @@ document.getElementById("blueRuinSwatch").addEventListener("click", function () 
     // description
     document.getElementById("dyeDescription").textContent = "A hue to commit to. Our truest, bluest of blue.";
 
-    // image
-    document.getElementById("dyeImage").innerHTML = `<img src="images/dyes/blueRuinProduct.png" alt="model with blue-dyed hair" height="500">`
+    // images
+    document.getElementById("dyeImage1").innerHTML = `<img src="images/dyes/blueRuinProduct.png" alt="model with blue-dyed hair" height="500">`;
+    document.getElementById("dyeImage2").innerHTML = `<img src="images/dyes/blueRuinModel.png" alt="model with blue hair" height="500">`;
+
+    //document.getElementById("dyeImage1").addEventListener("mouseover", function () {
+    //    document.getElementById("dyeImage1").classList.add("dyeImageHide");
+  //  });
+
+  //  document.getElementById("dyeImage1").addEventListener("mouseout", function () {
+//document.getElementById("dyeImage1").classList.remove("dyeImageHide");
+    //    document.getElementById("dyeImage1").classList.add("dyeImageReturn");
+   // });
 
     // reset border-width of other swatches
     document.getElementById("blueRuinSwatch").style.borderWidth = "6px";
@@ -126,7 +153,8 @@ document.getElementById("bizSwatch").addEventListener("click", function () {
     document.getElementById("dyeDescription").textContent = "We’re in the BIZness of miser- actually we are in the business of making bad ass hair products. Like this one! Hayley’s signature bold orange shade: BIZ!";
 
     // image
-    document.getElementById("dyeImage").innerHTML = `<img src="images/dyes/bizProduct.png" alt="model with orange-dyed hair" height="500">`
+    document.getElementById("dyeImage1").innerHTML = `<img src="images/dyes/bizProduct.png" alt="model with orange-dyed hair" height="500">`;
+    document.getElementById("dyeImage2").innerHTML = `<img src="images/dyes/bizModel.png" alt="model with orange hair" height="500">`;
 
     // reset border-width of other swatches
     document.getElementById("bizSwatch").style.borderWidth = "6px";
@@ -157,7 +185,8 @@ document.getElementById("rockLobsterSwatch").addEventListener("click", function 
     document.getElementById("dyeDescription").textContent = "Rock this bright lobster red from the dye bottle to your head!";
 
     // image
-    document.getElementById("dyeImage").innerHTML = `<img src="images/dyes/rockLobsterProduct.png" alt="model with red-dyed hair" height="500">`
+    document.getElementById("dyeImage1").innerHTML = `<img src="images/dyes/rockLobsterProduct.png" alt="model with red-dyed hair" height="500">`;
+    document.getElementById("dyeImage2").innerHTML = `<img src="images/dyes/rockLobsterModel.png" alt="model with red hair" height="500">`;
 
     // reset border-width of other swatches
     document.getElementById("rockLobsterSwatch").style.borderWidth = "6px";
@@ -188,7 +217,8 @@ document.getElementById("kowabungaSwatch").addEventListener("click", function ()
     document.getElementById("dyeDescription").textContent = "A classic color for you to be a clean, green, hair-dyeing machine!";
 
     // image
-    document.getElementById("dyeImage").innerHTML = `<img src="images/dyes/kowabungaProduct.png" alt="model with green-dyed hair" height="500">`
+    document.getElementById("dyeImage1").innerHTML = `<img src="images/dyes/kowabungaProduct.png" alt="model with green-dyed hair" height="500">`
+    document.getElementById("dyeImage2").innerHTML = `<img src="images/dyes/kowabungaModel.png" alt="model with green hair" height="500">`;
 
     // reset border-width of other swatches
     document.getElementById("kowabungaSwatch").style.borderWidth = "6px";
@@ -219,7 +249,8 @@ document.getElementById("riotSwatch").addEventListener("click", function () {
     document.getElementById("dyeDescription").textContent = "The color that launched it all. Orange you glad you dyed your hair?";
 
     // image
-    document.getElementById("dyeImage").innerHTML = `<img src="images/dyes/riotProduct.png" alt="model with orange-dyed hair" height="500">`
+    document.getElementById("dyeImage1").innerHTML = `<img src="images/dyes/riotProduct.png" alt="model with orange-dyed hair" height="500">`;
+    document.getElementById("dyeImage2").innerHTML = `<img src="images/dyes/riotModel.png" alt="model with orange hair" height="500">`;
 
     // reset border-width of other swatches
     document.getElementById("riotSwatch").style.borderWidth = "6px";
@@ -250,7 +281,8 @@ document.getElementById("stealMySunshineSwatch").addEventListener("click", funct
     document.getElementById("dyeDescription").textContent = "Yellow there! I love your hair! A bright yellow that is sure to make you rise and shine!";
 
     // image
-    document.getElementById("dyeImage").innerHTML = `<img src="images/dyes/stealMySunshineProduct.png" alt="model with yellow-dyed hair" height="500">`
+    document.getElementById("dyeImage1").innerHTML = `<img src="images/dyes/stealMySunshineProduct.png" alt="model with yellow-dyed hair" height="500">`;
+    document.getElementById("dyeImage2").innerHTML = `<img src="images/dyes/stealMySunshineModel.png" alt="model with yellow hair" height="500">`;
 
     // reset border-width of other swatches
     document.getElementById("stealMySunshineSwatch").style.borderWidth = "6px";
@@ -281,7 +313,8 @@ document.getElementById("narwhalSwatch").addEventListener("click", function () {
     document.getElementById("dyeDescription").textContent = "An almost mythical shade of teal that is too good to be blue.";
 
     // image
-    document.getElementById("dyeImage").innerHTML = `<img src="images/dyes/narwhalProduct.png" alt="model with teal-dyed hair" height="500">`
+    document.getElementById("dyeImage1").innerHTML = `<img src="images/dyes/narwhalProduct.png" alt="model with teal-dyed hair" height="500">`;
+    document.getElementById("dyeImage2").innerHTML = `<img src="images/dyes/narwhalModel.png" alt="model with teal hair" height="500">`;
 
     // reset border-width of other swatches
     document.getElementById("narwhalSwatch").style.borderWidth = "6px";
@@ -313,7 +346,8 @@ document.getElementById("pplEaterSwatch").addEventListener("click", function () 
     document.getElementById("dyeDescription").textContent = "A deep purple with just enough bite to turn heads.";
 
     // image
-    document.getElementById("dyeImage").innerHTML = `<img src="images/dyes/pplEaterProduct.png" alt="model with purple-dyed hair" height="500">`
+    document.getElementById("dyeImage1").innerHTML = `<img src="images/dyes/pplEaterProduct.png" alt="model with purple-dyed hair" height="500">`;
+    document.getElementById("dyeImage2").innerHTML = `<img src="images/dyes/pplEaterModel.png" alt="model with purple hair" height="500">`;
 
     // reset border-width of other swatches
     document.getElementById("pplEaterSwatch").style.borderWidth = "6px";

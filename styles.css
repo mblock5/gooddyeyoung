@@ -180,7 +180,7 @@ nav li a:hover {
 #homeSection1 img {
     height: 460px;
     grid-column-start: 2;
-    margin-top: 64px;
+    margin-top: 76px;
     margin-left: auto;
 }
 
@@ -286,15 +286,38 @@ nav li a:hover {
 
 /* -- DYE IMAGES -- */
 
-#dyeImage {
+#dyeImage1 {
     margin-left: 54px;
     margin-top: 56px;
+    z-index: 1;
+}
+
+#dyeImage1 img {
+    border-radius: 12px;
+}
+
+#dyeImage2 {
+    position: relative;
+    top: -559px;
+    margin-left: 54px;
+    margin-top: 56px;
+    z-index: 0;
     
 }
 
-#dyeImage img {
+#dyeImage2 img {
     border-radius: 12px;
 }
+
+/*.dyeImageHide {
+    opacity: 0%;
+    transition: opacity 0.5s ease-in;
+}
+
+.dyeImageReturn {
+    opacity: 100%;
+    transition: opacity 0.5s ease-out;
+}*/
 
 /* -- DYE SWATCHES -- */
 
@@ -317,22 +340,18 @@ nav li a:hover {
 #exGirlSwatch {
     background-color: #FF3386;
     border-width: 6px;
-    transition-timing-function: ease-in-out;
 }
 
 #blueRuinSwatch {
     background-color: #031CFF;
-    transition-timing-function: ease-in-out;
 }
 
 #bizSwatch {
     background-color: #FF7903;
-    transition-timing-function: ease-in-out;
 }
 
 #rockLobsterSwatch {
     background-color: #FF0303;
-    transition-timing-function: ease-in-out;
 }
 
 #kowabungaSwatch {
@@ -536,8 +555,11 @@ nav li a:hover {
 
 #submit {
     position: relative;
+    border-radius: 4px;
+    height: 40px;
     top: -420px;
     left: 325px;
+    text-transform: uppercase;
 }
 
 /* --------------------------- FOOTER  --------------------------- */
