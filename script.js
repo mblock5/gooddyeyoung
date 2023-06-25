@@ -421,22 +421,24 @@ function validateForm(event) {
         isValid = false;
     }
 
-    // validate phone number
-    if(phoneNum === "") {
-        displayErrorMessage("phoneNum", "Phone number is required.");
-        isValid = false;
-    } else if (!phoneRegex.test(phoneNum)) {
-        displayErrorMessage("phoneNum", "Please enter a valid phone number with 10 digits.");
-        isValid = false;
-    }
+    // validate phone number OR email based on preferred contact method selection
 
-    // validate email
-    if(email === "") {
-        displayErrorMessage("email", "Email is required.");
-        isValid = false;
-    } else if (!emailRegex.test(email)) {
-        displayErrorMessage("email", "Please enter a valid email address.");
-        isValid = false;
+    if(contactMethod === "phone") {
+        if(phoneNum === "") {
+            displayErrorMessage("phoneNum", "Phone number is required.");
+            isValid = false;
+        } else if (!phoneRegex.test(phoneNum)) {
+            displayErrorMessage("phoneNum", "Please enter a valid phone number with 10 digits.");
+            isValid = false;
+        }
+    } else if(contactMethod === "email") {
+        if(email === "") {
+            displayErrorMessage("email", "Email is required.");
+            isValid = false;
+        } else if (!emailRegex.test(email)) {
+            displayErrorMessage("email", "Please enter a valid email address.");
+            isValid = false;
+        }
     }
 
     // validate comments

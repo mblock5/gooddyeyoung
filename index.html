@@ -111,7 +111,7 @@
             <h2>Contact Us</h2>
             <p id="contactDirections">Please enter your contact<br> information in the form below:</p>
             <img src="images/other/hayley_brian3.png" alt="hayley and brian, owners and founders of good dye young">
-            <form id="contactForm" action="" method="POST" novalidate>
+            <form id="contactForm" action="https://wp.zybooks.com/form-viewer.php" method="POST" novalidate>
                 <p class="formP">
                     <label for="firstName">First Name*</label><br>
                     <input type="text" id="firstName" name="firstName" required><br>
@@ -125,14 +125,14 @@
                 </p>
 
                 <p class="formP">
-                    <label for="phoneNum">Phone Number*</label><br>
-                    <input type="tel" id="phoneNum" name="phoneNum" required><br>
+                    <label for="phoneNum">Phone Number</label><br>
+                    <input type="tel" id="phoneNum" name="phoneNum"><br>
                     <span class="errorMessage" id="phoneNumError"></span>
                 </p>
 
                 <p class="formP">
                     <label for="email">Email*</label><br>
-                    <input type="email" id="email" name="email" required><br>
+                    <input type="email" id="email" name="email"><br>
                     <span class="errorMessage" id="emailError"></span>
                 </p>
 
@@ -140,10 +140,10 @@
                     <legend>Preferred Contact Method</legend>
 
                     <label for="prefPhone">Phone</label>
-                    <input type="radio" id="prefPhone" name="prefContact" value="phone" checked>
+                    <input type="radio" id="prefPhone" name="prefContact" value="phone">
 
                     <label for="prefEmail">Email</label>
-                    <input type="radio" id="prefEmail" name="prefContact" value="email">
+                    <input type="radio" id="prefEmail" name="prefContact" value="email" checked>
                 </fieldset>
 
                 <p class="formP_C">
