@@ -1,6 +1,6 @@
 "use strict";
 
-// LIGHT MODE
+// // // // // // // LIGHT MODE // // // // // // // 
 
 document.getElementById("lightMode").addEventListener("click", function() {
 
@@ -32,7 +32,7 @@ document.getElementById("lightMode").addEventListener("click", function() {
     }
 });
 
-// DARK MODE
+// // // // // // // DARK MODE // // // // // // // 
 
 document.getElementById("darkMode").addEventListener("click", function() {
 
@@ -66,10 +66,9 @@ document.getElementById("darkMode").addEventListener("click", function() {
 });
 
 
-// SEMI-PERMANENT DYES SECTION
+// // // // // // // SEMI-PERMANENT DYES SECTION // // // // // // // 
 
 // EX-GIRL
-
 document.getElementById("exGirlSwatch").addEventListener("click", function () {
 
     // background gradient
@@ -137,7 +136,6 @@ document.getElementById("blueRuinSwatch").addEventListener("click", function () 
 });
 
 // BIZ
-
 document.getElementById("bizSwatch").addEventListener("click", function () {
 
     // background gradient
@@ -171,7 +169,6 @@ document.getElementById("bizSwatch").addEventListener("click", function () {
 });
 
 // ROCK LOBSTER
-
 document.getElementById("rockLobsterSwatch").addEventListener("click", function () {
 
     // background gradient
@@ -205,7 +202,6 @@ document.getElementById("rockLobsterSwatch").addEventListener("click", function 
 });
 
 // KOWABUNGA
-
 document.getElementById("kowabungaSwatch").addEventListener("click", function () {
 
     // background gradient
@@ -239,7 +235,6 @@ document.getElementById("kowabungaSwatch").addEventListener("click", function ()
 });
 
 // RIOT
-
 document.getElementById("riotSwatch").addEventListener("click", function () {
 
     // background gradient
@@ -273,7 +268,6 @@ document.getElementById("riotSwatch").addEventListener("click", function () {
 });
 
 // STEAL MY SUNSHINE
-
 document.getElementById("stealMySunshineSwatch").addEventListener("click", function () {
 
     // background gradient
@@ -307,7 +301,6 @@ document.getElementById("stealMySunshineSwatch").addEventListener("click", funct
 });
 
 // NARWHAL
-
 document.getElementById("narwhalSwatch").addEventListener("click", function () {
 
     // background gradient
@@ -342,7 +335,6 @@ document.getElementById("narwhalSwatch").addEventListener("click", function () {
 });
 
 // PPL EATER
-
 document.getElementById("pplEaterSwatch").addEventListener("click", function () {
 
     // background gradient
@@ -379,10 +371,88 @@ document.getElementById("pplEaterSwatch").addEventListener("click", function () 
 
 
 
+
+
+// CONTACT FORM
+
+// validate form
+function validateForm(event) {
+
+    // prevent default submission
+    event.preventDefault();
+
+    // call f(x)to clear previous error messages
+    clearErrorMessages();
+
+
+}
+
+// function to clear error messages
+function clearErrorMessages() {
+    let errorMessages = document.getElementsByClassName
+}
+
+
+
+
+
+
+
+
 // GAME PLAY / CONTEST
 
 // grab elements from HTML
-let userGuess = document.getElementById("userGuess");
-let generatedNum = document.getElementById("generatedNum");
+let userGuessElement = document.getElementById("userGuess");
+let generatedNumElement = document.getElementById("generatedNum");
 let button = document.getElementById("generate");
 let results = document.getElementById("contestResults");
+
+// get random number for generatedNum
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+// game play
+function gamePlay() {
+
+    // define the userGuess and generatedNum
+    let userGuess = parseInt(userGuessElement.value);
+    let generatedNum;
+
+    // verify that the user input a valid value (not left blank, not < 1, not > 10)
+    if(isNaN(userGuess) || userGuess < 1 || userGuess > 10) {
+        results.textContent = "Please enter a valid number between 1 and 10.";
+        generatedNum = "";
+    } else {
+        // display generatedNum on screen in "Computer:" field
+        generatedNum = randomNumber(1, 10);
+        generatedNumElement.value = generatedNum;
+    }
+    
+    // compare the generatedNum to the userGuess to determine a win or loss
+    if (userGuess === generatedNum) {
+        results.textContent = "Congratulations, you won!";
+    } else {
+        results.textContent = "Sorry, you did not win. Try again next time!";
+    }
+
+    // change generate button to reset to reset the game
+    button.value = "Reset";
+    button.removeEventListener("click", gamePlay);
+    button.addEventListener("click", resetGame);
+}
+
+// reset the game
+function resetGame() {
+
+    // reset numerical values in each field, results text, and button
+    userGuessElement.value = "";
+    generatedNumElement.value = "";
+    results.textContent = "";
+    button.value = "Generate";
+    button.removeEventListener("click", resetGame);
+    button.addEventListener("click", gamePlay);
+}
+
+// event listener to start the game when user clicks generate
+button.addEventListener("click", gamePlay);

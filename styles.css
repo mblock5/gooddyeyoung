@@ -482,7 +482,7 @@ nav li a:hover {
 }
 
 
-/* -- CONTEST FORM -- */
+/* -- GAME PLAY/CONTEST FORM -- */
 
 #contest {
     width: 300px;
@@ -529,12 +529,14 @@ nav li a:hover {
 }
 
 #generate {
+    cursor: pointer;
     border-radius: 4px;
     border: 1px solid #000000;
 }
 
 #contestResults {
     height: 86px;
+    font-size: 14px;
 }
 
 #submit {
