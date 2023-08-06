@@ -94,6 +94,7 @@ h1 {
     right: 40px;
     text-transform: uppercase;
     font-weight: 500;
+    margin: 0 auto;
 }
 #lightMode {
     cursor: pointer;
